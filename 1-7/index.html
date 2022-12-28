@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Data user</title>
+  </head>
+  <body>
+    <main id="container">
+      <div class="table-wrapper">
+        <table id="table" class="table table-striped table-dark"></table>
+      </div>
+      <button type="button" class="btn btn-success" onclick="createNewUser()">
+        Create
+      </button>
+
+      <div class="modal-wrapper" style="display: none">
+        <form id="modal" style="display: none">
+          <div class="form-group">
+            <label for="uid">UID:</label>
+            <input type="text" class="form-control" name="uid" />
+          </div>
+          <div class="form-group">
+            <label for="fname">FirstName:</label>
+            <input type="text" class="form-control" name="fname" />
+          </div>
+          <div class="form-group">
+            <label for="lname">LastName:</label>
+            <input type="text" class="form-control" name="lname" />
+          </div>
+          <div class="form-group">
+            <label for="city">City:</label>
+            <input type="text" class="form-control" name="city" />
+          </div>
+          <div class="form-group">
+            <label for="postalCode">PostalCode:</label>
+            <input type="text" class="form-control" name="postalCode" />
+          </div>
+          <div class="form-group">
+            <label for="phoneNumber">PhoneNumber:</label>
+            <input type="text" class="form-control" name="phoneNumber" />
+          </div>
+          <div class="form-group">
+            <label for="position">Position</label>
+            <input type="text" class="form-control" name="position" />
+          </div>
+          <div class="button-wrapper">
+            <button
+              style="display: none"
+              id="delete-btn"
+              type="button"
+              class="btn btn-danger"
+              onclick="deleteUser()"
+            >
+              Delete
+            </button>
+            <button
+              style="display: none"
+              id="update-btn"
+              type="button"
+              class="btn btn-primary"
+              onclick="updateUser()"
+            >
+              Update
+            </button>
+            <button
+              style="display: none"
+              id="add-btn"
+              type="button"
+              class="btn btn-success"
+              onclick="addNewUser()"
+            >
+              Add
+            </button>
+            <button
+              id="add-btn"
+              type="button"
+              class="btn btn-secondary"
+              onclick="closeModal()"
+            >
+              Close
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <script src="./utils/renderTable.js"></script>
+    <script src="./utils/renderModal.js"></script>
+    <script src="./utils/closeModal.js"></script>
+    <script src="./utils/resetModal.js"></script>
+    <script src="./Data/user-data.js"></script>
+    <script src="./utils/sortData.js"></script>
+    <script src="./utils/delete.js"></script>
+    <script src="./utils/update.js"></script>
+    <script src="./utils/add.js"></script>
+    <script src="./utils/validator.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
