@@ -12,9 +12,22 @@ body {
 }
 .table-wrapper {
   border: 2px rgb(106, 106, 106) solid;
-  height: 538.5px;
-  overflow-y: scroll;
+  max-height: 543.5px;
+  overflow-y: auto;
   margin: 0.5rem 0;
+}
+.table-wrapper::-webkit-scrollbar {
+  width: 13px;
+}
+
+.table-wrapper::-webkit-scrollbar-track {
+  background: #2d3034;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+  background-color: #83aa9b;
+  border-radius: 5px;
+  border: 3px solid #2d3034;
 }
 #container table {
   margin: 0;
