@@ -3,7 +3,7 @@ function containsNumbers(str) {
   return /\d/.test(str);
 }
 function containsChar(str) {
-  return /^[a-zA-Z0-9]+$/.test(str);
+  return /^[a-zA-Z]+$/.test(str);
 }
 
 function usernameValidator(username) {
